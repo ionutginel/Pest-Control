@@ -1,0 +1,6 @@
+{
+  "name": "Rodent Exterminators",
+  "description": "Professional domestic and commercial pest control services across all 32 London boroughs, operating 24/7 with rapid response.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

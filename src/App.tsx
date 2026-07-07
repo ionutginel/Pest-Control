@@ -1,0 +1,108 @@
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+// Pages
+import HomePage from "./pages/HomePage";
+import ServicePage from "./pages/ServicePage";
+import PestListPage from "./pages/PestListPage";
+import PestDetailPage from "./pages/PestDetailPage";
+import AreaListPage from "./pages/AreaListPage";
+import AreaDetailPage from "./pages/AreaDetailPage";
+import PostcodeDetailPage from "./pages/PostcodeDetailPage";
+import ContactPage from "./pages/ContactPage";
+
+interface RouteState {
+  page: string;
+  id?: string;
+  postcode?: string;
+}
+
+export default function App() {
+  const [route, setRoute] = useState<RouteState>(() => {
+    return parseHash(window.location.hash);
+  });
+
+  function parseHash(hash: string): RouteState {
+    if (!hash || hash === "#" || hash === "#/") {
+      return { page: "home" };
+    }
+    
+    // Clean trailing slashes or question marks if any
+    const cleaned = hash.replace(/^#\//, "").split("?")[0];
+    const parts = cleaned.split("/");
+
+    if (parts[0] === "services") {
+      return { page: "service-detail", id: parts[1] || "domestic" };
+    }
+    if (parts[0] === "pests") {
+      if (parts[1]) {
+        return { page: "pest-detail", id: parts[1] };
+      }
+      return { page: "pests" };
+    }
+    if (parts[0] === "areas") {
+      if (parts[1]) {
+        if (parts[2]) {
+          return { page: "postcode-detail", id: parts[1], postcode: parts[2] };
+        }
+        return { page: "area-detail", id: parts[1] };
+      }
+      return { page: "areas" };
+    }
+    if (parts[0] === "contact") {
+      return { page: "contact" };
+    }
+    
+    return { page: "home" };
+  }
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setRoute(parseHash(window.location.hash));
+      // Force instant scroll back to top of the page on route transition
+      window.scrollTo({ top: 0, behavior: "instant" as any });
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const renderActivePage = () => {
+    switch (route.page) {
+      case "home":
+        return <HomePage />;
+      case "service-detail":
+        return <ServicePage serviceId={(route.id as any) || "domestic"} />;
+      case "pests":
+        return <PestListPage />;
+      case "pest-detail":
+        return <PestDetailPage pestId={route.id || ""} />;
+      case "areas":
+        return <AreaListPage />;
+      case "area-detail":
+        return <AreaDetailPage boroughId={route.id || ""} />;
+      case "postcode-detail":
+        return <PostcodeDetailPage boroughId={route.id || ""} postcode={route.postcode || ""} />;
+      case "contact":
+        return <ContactPage />;
+      default:
+        return <HomePage />;
+    }
+  };
+
+  return (
+    <div className="bg-[#fcfcfd] min-h-screen text-slate-800 selection:bg-red-600 selection:text-white antialiased font-sans flex flex-col justify-between">
+      {/* Multi-page Aware Navigation Header */}
+      <Header currentRoute={route} />
+
+      {/* Main Page Canvas Stage */}
+      <main className="flex-grow">
+        {renderActivePage()}
+      </main>
+
+      {/* Compliant Corporate Footer */}
+      <Footer />
+    </div>
+  );
+}
