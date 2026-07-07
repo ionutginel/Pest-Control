@@ -83,7 +83,7 @@ export default function BookingForm({ initialPestId = "", initialBoroughId = "",
             </div>
             <h3 className="text-base font-black text-slate-900">Get a Free Instant Callback</h3>
             <p className="text-[11px] text-slate-400 leading-relaxed">
-              Fill details for under-1-hour service. Or call: <a href="tel:01604930045" className="text-red-600 font-bold hover:underline font-mono">01604 930 045</a>
+              Fill details for under-1-hour service. Or call: <a href="tel:02088198933" className="text-red-600 font-bold hover:underline font-mono">020 8819 8933</a>
             </p>
           </div>
 

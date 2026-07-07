@@ -6,7 +6,7 @@ export default function AreaListPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   React.useEffect(() => {
-    document.title = "Our Service Areas & Postcode Coverage | Rodent Exterminators";
+    document.title = "Our Service Areas & Postcode Coverage | London Pest Management";
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {

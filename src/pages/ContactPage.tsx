@@ -4,7 +4,7 @@ import { ShieldCheck, Phone, Mail, MapPin, Clock, BadgeCheck, ExternalLink, Help
 
 export default function ContactPage() {
   React.useEffect(() => {
-    document.title = "Contact Our 24/7 Booking Desk | Rodent Exterminators";
+    document.title = "Contact Our 24/7 Booking Desk | London Pest Management";
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -12,7 +12,7 @@ export default function ContactPage() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Get in touch with Rodent Exterminators. 24/7 emergency phone lines, direct email support, and fast callback request forms. Certified pest controllers.');
+    metaDescription.setAttribute('content', 'Get in touch with London Pest Management. 24/7 emergency phone lines, direct email support, and fast callback request forms. Certified pest controllers.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -20,7 +20,7 @@ export default function ContactPage() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'contact pest control, email Rodent Exterminators, pest control Northampton, book exterminator, 24/7 emergency dispatch');
+    metaKeywords.setAttribute('content', 'contact pest control, email London Pest Management, pest control London, book exterminator, 24/7 emergency dispatch');
   }, []);
 
   return (
@@ -49,12 +49,12 @@ export default function ContactPage() {
               
               <div className="bg-white border border-slate-200/80 p-5 rounded-2xl flex items-start gap-4 shadow-sm">
                 <div className="bg-red-50 text-red-600 p-3 rounded-xl">
-                  <Phone className="w-5 h-5" />
+                   <Phone className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
                   <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">OFFICE HOTLINE</span>
-                  <a href="tel:01604930045" className="text-base font-extrabold text-slate-950 hover:text-red-600 font-mono block">
-                    01604 930 045
+                  <a href="tel:02088198933" className="text-base font-extrabold text-slate-950 hover:text-red-600 font-mono block">
+                    020 8819 8933
                   </a>
                   <p className="text-[11px] text-slate-500">Available 24 hours a day, 7 days a week.</p>
                 </div>
@@ -66,8 +66,8 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-1">
                   <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">EMAIL SUPPORT</span>
-                  <a href="mailto:contact@northamptonpestcontrol24.co.uk" className="text-sm font-extrabold text-slate-950 hover:text-red-600 block break-all">
-                    contact@northamptonpestcontrol24.co.uk
+                  <a href="mailto:contact@londonpestmanagement.co.uk" className="text-sm font-extrabold text-slate-950 hover:text-red-600 block break-all">
+                    contact@londonpestmanagement.co.uk
                   </a>
                   <p className="text-[11px] text-slate-500">Typical response within 1 hour.</p>
                 </div>
@@ -82,12 +82,12 @@ export default function ContactPage() {
               </div>
               <div className="space-y-1">
                 <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">REGISTERED UK OFFICE</span>
-                <h4 className="font-extrabold text-slate-950 text-sm">Rodent Exterminators (Head Office)</h4>
+                <h4 className="font-extrabold text-slate-950 text-sm">London Pest Management (Head Office)</h4>
                 <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                  8 South Paddock Court, Northampton, NN3 8LH
+                  51 The Mall, London WC2N 5DU
                 </p>
                 <div className="pt-2 text-[10px] text-slate-400 font-mono">
-                  Registered domain: <a href="https://rodents-exterminators.co.uk" className="text-red-600 hover:underline">https://rodents-exterminators.co.uk</a>
+                  Registered domain: <a href="https://www.londonpestmanagement.co.uk" className="text-red-600 hover:underline">www.londonpestmanagement.co.uk</a>
                 </div>
               </div>
             </div>

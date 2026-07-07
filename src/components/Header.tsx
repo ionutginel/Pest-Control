@@ -52,8 +52,8 @@ export default function Header({ currentRoute }: HeaderProps) {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-slate-300 hidden md:inline">Emergency Response: Under 1 Hour</span>
-            <a href="tel:01604930045" className="font-extrabold text-red-400 hover:text-red-300 transition-colors flex items-center gap-1 font-mono">
-              <Phone className="w-3 h-3" /> 01604 930 045
+            <a href="tel:02088198933" className="font-extrabold text-red-400 hover:text-red-300 transition-colors flex items-center gap-1 font-mono">
+              <Phone className="w-3 h-3" /> 020 8819 8933
             </a>
           </div>
         </div>
@@ -73,10 +73,10 @@ export default function Header({ currentRoute }: HeaderProps) {
             </div>
             <div>
               <span className="text-xl font-black tracking-tight text-slate-950 block leading-none">
-                RODENT
+                LONDON
               </span>
               <span className="text-[9px] font-bold tracking-widest text-red-600 uppercase block">
-                EXTERMINATORS
+                PEST MANAGEMENT
               </span>
             </div>
           </a>
@@ -152,12 +152,12 @@ export default function Header({ currentRoute }: HeaderProps) {
           {/* Callout */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:01604930045"
+              href="tel:02088198933"
               id="header-phone-cta"
               className="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-xl px-4 py-2.5 transition-all text-slate-800 font-bold text-sm font-mono"
             >
               <Phone className="w-4 h-4 text-red-600" />
-              01604 930 045
+              020 8819 8933
             </a>
             <a
               href="#/contact"
@@ -170,7 +170,7 @@ export default function Header({ currentRoute }: HeaderProps) {
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
             <a
-              href="tel:01604930045"
+              href="tel:02088198933"
               className="bg-red-50 text-red-600 p-2.5 rounded-xl hover:bg-red-100 transition-colors border border-red-100"
               title="Call Now"
             >
@@ -251,11 +251,11 @@ export default function Header({ currentRoute }: HeaderProps) {
 
           <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
             <a
-              href="tel:01604930045"
+              href="tel:02088198933"
               className="flex items-center justify-center gap-2 bg-slate-900 text-white py-3 rounded-xl font-bold font-mono text-sm"
             >
               <Phone className="w-4 h-4 text-red-400" />
-              01604 930 045
+              020 8819 8933
             </a>
             <a
               href="#/contact"

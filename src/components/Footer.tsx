@@ -23,8 +23,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-lg font-black tracking-tight text-white block leading-none">RODENT</span>
-                <span className="text-[10px] font-bold tracking-widest text-red-500 uppercase block">EXTERMINATORS</span>
+                <span className="text-lg font-black tracking-tight text-white block leading-none">LONDON</span>
+                <span className="text-[10px] font-bold tracking-widest text-red-500 uppercase block">PEST MANAGEMENT</span>
               </div>
             </a>
 
@@ -37,30 +37,30 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-200 block">Registered UK Office Address:</span>
-                  8 South Paddock Court, Northampton, NN3 8LH
+                  51 The Mall, London WC2N 5DU
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Phone className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-200 block">Office Hotline:</span>
-                  <a href="tel:01604930045" className="hover:text-white font-mono">01604 930 045</a>
+                  <a href="tel:02088198933" className="hover:text-white font-mono">020 8819 8933</a>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-200 block">Email Support:</span>
-                  <a href="mailto:contact@northamptonpestcontrol24.co.uk" className="hover:text-white">
-                    contact@northamptonpestcontrol24.co.uk
+                  <a href="mailto:contact@londonpestmanagement.co.uk" className="hover:text-white">
+                    contact@londonpestmanagement.co.uk
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="text-[10px] text-slate-500 space-y-1 font-mono">
-              <p>Registered Domain: <a href="https://rodents-exterminators.co.uk" className="text-red-400 hover:underline inline-flex items-center gap-0.5">https://rodents-exterminators.co.uk <ExternalLink className="w-2.5 h-2.5" /></a></p>
-              <p>Trading Name: Rodent Exterminators</p>
+              <p>Registered Domain: <a href="https://www.londonpestmanagement.co.uk" className="text-red-400 hover:underline inline-flex items-center gap-0.5">www.londonpestmanagement.co.uk <ExternalLink className="w-2.5 h-2.5" /></a></p>
+              <p>Trading Name: London Pest Management</p>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-3 text-xs font-semibold">
               <li>
                 <a href="#/" className="text-slate-400 hover:text-white transition-colors">
-                  Rodent Exterminators
+                  London Pest Management
                 </a>
               </li>
               <li>
@@ -132,7 +132,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Bottom copyright line */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
-          <p>© 2026 Rodent Exterminators. Northampton office. All rights reserved.</p>
+          <p>© 2026 London Pest Management. All rights reserved.</p>
           <button
             onClick={handleScrollTop}
             className="flex items-center gap-1 hover:text-white bg-slate-950 border border-slate-800/80 hover:bg-slate-800 py-2 px-4 rounded-xl transition-all"

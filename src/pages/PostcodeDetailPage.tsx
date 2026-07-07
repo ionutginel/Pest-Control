@@ -246,8 +246,8 @@ export default function PostcodeDetailPage({ boroughId, postcode }: PostcodeDeta
             <div className="bg-slate-900 text-white p-6 rounded-3xl border border-slate-800 space-y-3">
               <span className="text-[10px] text-red-500 font-bold font-mono uppercase tracking-widest block">Direct Local Line</span>
               <p className="text-sm font-bold text-slate-100">Bypass the ticketing queue and dial the active {cleanPostcode} dispatcher:</p>
-              <a href="tel:01604930045" className="text-xl font-black text-red-400 hover:text-red-300 transition-colors font-mono block">
-                01604 930 045
+              <a href="tel:02088198933" className="text-xl font-black text-red-400 hover:text-red-300 transition-colors font-mono block">
+                020 8819 8933
               </a>
               <p className="text-[10px] text-slate-500 leading-relaxed font-sans">
                 Our main office hotline automatically triggers rapid radio-relay dispatch to the active field unit closest to {cleanPostcode}.

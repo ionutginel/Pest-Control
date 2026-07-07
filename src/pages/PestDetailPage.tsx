@@ -12,7 +12,7 @@ export default function PestDetailPage({ pestId }: PestDetailPageProps) {
 
   React.useEffect(() => {
     if (!pest) return;
-    document.title = `Professional ${pest.name} Control & Eradication | Rodent Exterminators`;
+    document.title = `Professional ${pest.name} Control & Eradication | London Pest Management`;
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -203,7 +203,7 @@ export default function PestDetailPage({ pestId }: PestDetailPageProps) {
             <div className="bg-white border border-slate-200/80 p-6 rounded-3xl space-y-4">
               <h4 className="text-xs font-black uppercase tracking-wider text-slate-950">Guaranteed Treatment Safeguards</h4>
               <p className="text-[11px] text-slate-500 leading-relaxed">
-                Our treatments are backed by our signature <strong>Rodent Exterminators Guarantee</strong>. If pests persist within the contract window, we re-visit your premises and re-treat completely free of charge.
+                Our treatments are backed by our signature <strong>London Pest Management Guarantee</strong>. If pests persist within the contract window, we re-visit your premises and re-treat completely free of charge.
               </p>
               <div className="border-t border-slate-100 pt-3 text-[10px] text-slate-400 font-mono">
                 Assurance protocols backed by BPCA/NPTA industry certifications.

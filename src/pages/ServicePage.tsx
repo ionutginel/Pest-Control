@@ -15,7 +15,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
 
   React.useEffect(() => {
     const serviceName = isDomestic ? "Domestic & Residential" : "Commercial & Business";
-    document.title = `${serviceName} Pest Control Services | Rodent Exterminators`;
+    document.title = `${serviceName} Pest Control Services | London Pest Management`;
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {

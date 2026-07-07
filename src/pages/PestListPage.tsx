@@ -7,7 +7,7 @@ export default function PestListPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   React.useEffect(() => {
-    document.title = "Pests Encyclopedia | Starting Prices & Eradication | Rodent Exterminators";
+    document.title = "Pests Encyclopedia | Starting Prices & Eradication | London Pest Management";
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -215,11 +215,11 @@ export default function PestListPage() {
           </div>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
             <a
-              href="tel:01604930045"
+              href="tel:02088198933"
               className="bg-white hover:bg-slate-50 text-slate-950 font-black text-sm py-3.5 px-6 rounded-2xl transition-all text-center flex items-center justify-center gap-1.5 font-mono"
             >
               <Phone className="w-4 h-4 text-red-600" />
-              01604 930 045
+              020 8819 8933
             </a>
             <a
               href="#/contact"

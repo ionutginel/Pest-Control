@@ -14,7 +14,7 @@ export default function HomePage() {
   const [boroughMatch, setBoroughMatch] = useState<any>(null);
 
   React.useEffect(() => {
-    document.title = "Rodent Exterminators | 24/7 Emergency Pest & Rodent Control";
+    document.title = "London Pest Management | 24/7 Emergency Pest & Rodent Control";
     
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -30,7 +30,7 @@ export default function HomePage() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'pest control London, emergency rodent control, 24/7 bed bug removal, commercial pest compliance, Rodent Exterminators');
+    metaKeywords.setAttribute('content', 'pest control London, emergency rodent control, 24/7 bed bug removal, commercial pest compliance, London Pest Management');
   }, []);
 
   // Featured 6 pests for landing highlight
@@ -123,11 +123,11 @@ export default function HomePage() {
               {/* Call-to-action bar */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <a
-                  href="tel:01604930045"
+                  href="tel:02088198933"
                   className="bg-slate-950 hover:bg-slate-900 text-white font-extrabold text-sm py-4 px-6 rounded-2xl transition-all shadow-lg flex items-center justify-center gap-2 font-mono"
                 >
                   <Phone className="w-4 h-4 text-red-500" />
-                  01604 930 045
+                  020 8819 8933
                 </a>
                 <a
                   href="#/contact"
@@ -402,7 +402,7 @@ export default function HomePage() {
             
             <div className="space-y-6">
               <span className="text-red-500 font-extrabold text-xs uppercase tracking-wider block">Unrivalled Safety & Care</span>
-              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">Why Rodent Exterminators is London's Best Choice</h2>
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">Why London Pest Management is London's Best Choice</h2>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Pest management is more than applying chemicals; it is about absolute eradication, safety, and long-term security. Our BPCA member credentials mean you receive certified and audited specialists.
               </p>
@@ -459,8 +459,8 @@ export default function HomePage() {
               <div className="pt-8 border-t border-slate-800/80 mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <span className="text-[10px] text-slate-500 block font-bold">24HR TELEPHONE RESPONSE</span>
-                  <a href="tel:01604930045" className="text-2xl font-black text-red-500 hover:text-red-400 font-mono">
-                    01604 930 045
+                  <a href="tel:02088198933" className="text-2xl font-black text-red-500 hover:text-red-400 font-mono">
+                    020 8819 8933
                   </a>
                 </div>
                 <a
@@ -497,7 +497,7 @@ export default function HomePage() {
                 location: "Kensington, London",
                 rating: 5,
                 date: "12 days ago",
-                comment: "Discovered a mouse problem in our kitchen late on a Sunday. Rodent Exterminators had an engineer at our house within 2 hours. Extremely professional, clean, and we've had no issues since. Highly recommend their 24hr service!",
+                comment: "Discovered a mouse problem in our kitchen late on a Sunday. London Pest Management had an engineer at our house within 2 hours. Extremely professional, clean, and we've had no issues since. Highly recommend their 24hr service!",
                 initials: "SJ"
               },
               {
