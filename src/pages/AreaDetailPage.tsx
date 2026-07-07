@@ -48,7 +48,7 @@ export default function AreaDetailPage({ boroughId }: AreaDetailPageProps) {
             The requested London Borough is not in our direct database index. We cover all 32 boroughs across Greater London.
           </p>
           <a
-            href="#/areas"
+            href="/areas"
             className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl transition-all"
           >
             Browse Covered Areas
@@ -65,7 +65,7 @@ export default function AreaDetailPage({ boroughId }: AreaDetailPageProps) {
         {/* Breadcrumb Navigation */}
         <div className="mb-6 text-left">
           <a
-            href="#/areas"
+            href="/areas"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-red-600 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Covered Areas
@@ -128,7 +128,7 @@ export default function AreaDetailPage({ boroughId }: AreaDetailPageProps) {
                 {borough.postcodes.map((pc) => (
                   <a
                     key={pc}
-                    href={`#/areas/${borough.id}/${pc.toLowerCase()}`}
+                    href={`/areas/${borough.id}/${pc.toLowerCase()}`}
                     className="bg-white hover:bg-red-50 hover:text-red-600 hover:border-red-600 border border-slate-200 shadow-sm text-slate-900 font-extrabold font-mono text-xs px-3 py-1.5 rounded-xl transition-all"
                   >
                     {pc}

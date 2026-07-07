@@ -84,7 +84,7 @@ export default function Header({ currentRoute }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav id="desktop-nav" className="hidden md:flex items-center gap-6 lg:gap-8">
             <a
-              href="#/"
+              href="/"
               className={`text-sm font-semibold transition-colors hover:text-red-600 relative py-2 ${
                 isActive("home") ? "text-red-600" : "text-slate-600"
               }`}
@@ -103,7 +103,7 @@ export default function Header({ currentRoute }: HeaderProps) {
               </button>
               <div className="absolute top-full left-0 bg-white border border-slate-200 shadow-xl rounded-xl py-2 w-56 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-200 mt-1 z-50">
                 <a
-                  href="#/services/domestic"
+                  href="/services/domestic"
                   className={`block px-4 py-2.5 text-xs font-semibold hover:bg-slate-50 transition-colors text-left ${
                     isActive("services", "domestic") ? "text-red-600 bg-red-50/30" : "text-slate-700"
                   }`}
@@ -111,7 +111,7 @@ export default function Header({ currentRoute }: HeaderProps) {
                   Domestic Pest Control
                 </a>
                 <a
-                  href="#/services/commercial"
+                  href="/services/commercial"
                   className={`block px-4 py-2.5 text-xs font-semibold hover:bg-slate-50 transition-colors text-left ${
                     isActive("services", "commercial") ? "text-red-600 bg-red-50/30" : "text-slate-700"
                   }`}
@@ -122,7 +122,7 @@ export default function Header({ currentRoute }: HeaderProps) {
             </div>
 
             <a
-              href="#/pests"
+              href="/pests"
               className={`text-sm font-semibold transition-colors hover:text-red-600 relative py-2 ${
                 isActive("pests") ? "text-red-600" : "text-slate-600"
               }`}
@@ -131,7 +131,7 @@ export default function Header({ currentRoute }: HeaderProps) {
             </a>
 
             <a
-              href="#/areas"
+              href="/areas"
               className={`text-sm font-semibold transition-colors hover:text-red-600 relative py-2 ${
                 isActive("areas") ? "text-red-600" : "text-slate-600"
               }`}
@@ -140,7 +140,7 @@ export default function Header({ currentRoute }: HeaderProps) {
             </a>
 
             <a
-              href="#/contact"
+              href="/contact"
               className={`text-sm font-semibold transition-colors hover:text-red-600 relative py-2 ${
                 isActive("contact") ? "text-red-600" : "text-slate-600"
               }`}
@@ -160,7 +160,7 @@ export default function Header({ currentRoute }: HeaderProps) {
               020 8819 8933
             </a>
             <a
-              href="#/contact"
+              href="/contact"
               className="bg-red-600 hover:bg-red-700 text-white text-xs uppercase tracking-wider font-bold py-3 px-5 rounded-xl transition-all shadow-md shadow-red-600/10 flex items-center gap-1.5"
             >
               Emergency Booking <ArrowRight className="w-3.5 h-3.5" />
@@ -190,7 +190,7 @@ export default function Header({ currentRoute }: HeaderProps) {
       {isMobileMenuOpen && (
         <div id="mobile-drawer" className="md:hidden bg-white border-b border-slate-200 px-4 py-5 space-y-3 shadow-xl mt-1 text-left">
           <a
-            href="#/"
+            href="/"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`block py-2.5 px-3 rounded-xl text-sm font-semibold transition-colors ${
               isActive("home") ? "bg-red-50 text-red-600" : "text-slate-700 hover:bg-slate-50"
@@ -201,7 +201,7 @@ export default function Header({ currentRoute }: HeaderProps) {
           
           <div className="px-3 py-1 text-slate-400 text-[10px] uppercase font-bold tracking-wider">Services</div>
           <a
-            href="#/services/domestic"
+            href="/services/domestic"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`block py-2 px-3 pl-6 rounded-xl text-xs font-semibold transition-colors ${
               isActive("services", "domestic") ? "text-red-600 bg-red-50/20 font-bold" : "text-slate-600 hover:bg-slate-50"
@@ -210,7 +210,7 @@ export default function Header({ currentRoute }: HeaderProps) {
             Domestic Pest Control
           </a>
           <a
-            href="#/services/commercial"
+            href="/services/commercial"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`block py-2 px-3 pl-6 rounded-xl text-xs font-semibold transition-colors ${
               isActive("services", "commercial") ? "text-red-600 bg-red-50/20 font-bold" : "text-slate-600 hover:bg-slate-50"
@@ -220,7 +220,7 @@ export default function Header({ currentRoute }: HeaderProps) {
           </a>
 
           <a
-            href="#/pests"
+            href="/pests"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`block py-2.5 px-3 rounded-xl text-sm font-semibold transition-colors ${
               isActive("pests") ? "bg-red-50 text-red-600" : "text-slate-700 hover:bg-slate-50"
@@ -230,7 +230,7 @@ export default function Header({ currentRoute }: HeaderProps) {
           </a>
 
           <a
-            href="#/areas"
+            href="/areas"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`block py-2.5 px-3 rounded-xl text-sm font-semibold transition-colors ${
               isActive("areas") ? "bg-red-50 text-red-600" : "text-slate-700 hover:bg-slate-50"
@@ -240,7 +240,7 @@ export default function Header({ currentRoute }: HeaderProps) {
           </a>
 
           <a
-            href="#/contact"
+            href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`block py-2.5 px-3 rounded-xl text-sm font-semibold transition-colors ${
               isActive("contact") ? "bg-red-50 text-red-600" : "text-slate-700 hover:bg-slate-50"
@@ -258,7 +258,7 @@ export default function Header({ currentRoute }: HeaderProps) {
               020 8819 8933
             </a>
             <a
-              href="#/contact"
+              href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl text-center text-xs uppercase tracking-wider font-bold shadow-md shadow-red-600/10"
             >

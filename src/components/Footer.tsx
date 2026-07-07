@@ -69,32 +69,32 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xs uppercase tracking-widest font-bold text-white">Quick Links</h4>
             <ul className="space-y-3 text-xs font-semibold">
               <li>
-                <a href="#/" className="text-slate-400 hover:text-white transition-colors">
+                <a href="/" className="text-slate-400 hover:text-white transition-colors">
                   London Pest Management
                 </a>
               </li>
               <li>
-                <a href="#/services/domestic" className="text-slate-400 hover:text-white transition-colors">
+                <a href="/services/domestic" className="text-slate-400 hover:text-white transition-colors">
                   Domestic Pest Treatment
                 </a>
               </li>
               <li>
-                <a href="#/services/commercial" className="text-slate-400 hover:text-white transition-colors">
+                <a href="/services/commercial" className="text-slate-400 hover:text-white transition-colors">
                   Commercial Compliance Treatment
                 </a>
               </li>
               <li>
-                <a href="#/pests" className="text-slate-400 hover:text-white transition-colors">
+                <a href="/pests" className="text-slate-400 hover:text-white transition-colors">
                   Pests Encyclopedia
                 </a>
               </li>
               <li>
-                <a href="#/areas" className="text-slate-400 hover:text-white transition-colors">
+                <a href="/areas" className="text-slate-400 hover:text-white transition-colors">
                   Areas Covered
                 </a>
               </li>
               <li>
-                <a href="#/contact" className="text-slate-400 hover:text-white transition-colors">
+                <a href="/contact" className="text-slate-400 hover:text-white transition-colors">
                   Emergency Booking Desk
                 </a>
               </li>

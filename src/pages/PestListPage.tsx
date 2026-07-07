@@ -174,7 +174,7 @@ export default function PestListPage() {
                     <span className="text-sm font-black text-red-600 font-mono">From £{pest.startingPrice}</span>
                   </div>
                   <a
-                    href={`#/pests/${pest.id}`}
+                    href={`/pests/${pest.id}`}
                     className="bg-slate-100 group-hover:bg-red-50 text-slate-800 group-hover:text-red-600 text-xs font-extrabold py-2 px-3.5 rounded-xl transition-all flex items-center gap-1 shrink-0"
                   >
                     View Treatments
@@ -222,7 +222,7 @@ export default function PestListPage() {
               020 8819 8933
             </a>
             <a
-              href="#/contact"
+              href="/contact"
               className="bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-wider py-4 px-6 rounded-2xl transition-all text-center"
             >
               Book Dispatcher Visit

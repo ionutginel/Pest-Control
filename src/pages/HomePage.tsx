@@ -130,7 +130,7 @@ export default function HomePage() {
                   020 8819 8933
                 </a>
                 <a
-                  href="#/contact"
+                  href="/contact"
                   className="bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm py-4 px-6 rounded-2xl transition-all shadow-md shadow-red-600/10 text-center flex items-center justify-center gap-1.5"
                 >
                   Book Instant Visit <ArrowRight className="w-4 h-4" />
@@ -187,7 +187,7 @@ export default function HomePage() {
               </div>
               <div className="pt-8">
                 <a
-                  href="#/services/domestic"
+                  href="/services/domestic"
                   className="inline-flex items-center gap-1.5 text-xs font-extrabold text-red-600 group-hover:translate-x-1.5 transition-transform"
                 >
                   View domestic treatments <ChevronRight className="w-4 h-4" />
@@ -222,7 +222,7 @@ export default function HomePage() {
               </div>
               <div className="pt-8">
                 <a
-                  href="#/services/commercial"
+                  href="/services/commercial"
                   className="inline-flex items-center gap-1.5 text-xs font-extrabold text-slate-900 group-hover:translate-x-1.5 transition-transform"
                 >
                   View commercial contracts <ChevronRight className="w-4 h-4" />
@@ -274,13 +274,13 @@ export default function HomePage() {
                 <div className="mt-3 flex flex-col gap-2">
                   {boroughMatch.matchedPostcode && (
                     <a
-                      href={`#/areas/${boroughMatch.id}/${boroughMatch.matchedPostcode.toLowerCase()}`}
+                      href={`/areas/${boroughMatch.id}/${boroughMatch.matchedPostcode.toLowerCase()}`}
                       className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-[11px] font-extrabold uppercase tracking-wider py-2 px-3.5 rounded-lg w-fit transition-all shadow-sm"
                     >
                       Go to local {boroughMatch.matchedPostcode} page
                     </a>
                   )}
-                  <a href={`#/areas/${boroughMatch.id}`} className="text-slate-600 font-bold hover:text-red-600 transition-colors underline block text-[11px]">
+                  <a href={`/areas/${boroughMatch.id}`} className="text-slate-600 font-bold hover:text-red-600 transition-colors underline block text-[11px]">
                     Browse all {boroughMatch.name} postcodes
                   </a>
                 </div>
@@ -313,7 +313,7 @@ export default function HomePage() {
               <p className="text-slate-500 text-xs">Explore common pests, understand threat profiles, and check direct treatment pricing starting from £95.</p>
             </div>
             <a
-              href="#/pests"
+              href="/pests"
               className="bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 font-bold text-xs py-3 px-5 rounded-xl transition-all shrink-0 flex items-center gap-1.5 cursor-pointer"
             >
               Browse all 27 pests <ArrowRight className="w-4 h-4 text-red-600" />
@@ -381,7 +381,7 @@ export default function HomePage() {
                     <span className="text-base font-black text-red-600 font-mono">From £{pest.startingPrice}</span>
                   </div>
                   <a
-                    href={`#/pests/${pest.id}`}
+                    href={`/pests/${pest.id}`}
                     className="text-xs font-extrabold text-slate-900 group-hover:text-red-600 transition-all flex items-center gap-1"
                   >
                     Details <ChevronRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5" />
@@ -464,7 +464,7 @@ export default function HomePage() {
                   </a>
                 </div>
                 <a
-                  href="#/contact"
+                  href="/contact"
                   className="bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs uppercase tracking-wider py-4 px-6 rounded-2xl transition-all shadow-md shadow-red-600/10 text-center"
                 >
                   Request Dispatch callback
@@ -576,7 +576,7 @@ export default function HomePage() {
                 <p className="font-bold text-sm text-slate-100">Average ETA: 90 Minutes</p>
               </div>
               <a 
-                href="#/contact" 
+                href="/contact" 
                 className="bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all shadow-md shadow-red-600/10 text-center w-full sm:w-auto whitespace-nowrap"
               >
                 Book An Inspection

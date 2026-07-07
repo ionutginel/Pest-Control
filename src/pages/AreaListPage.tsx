@@ -89,7 +89,7 @@ export default function AreaListPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {filteredBoroughs.map((borough) => (
               <a
-                href={`#/areas/${borough.id}`}
+                href={`/areas/${borough.id}`}
                 key={borough.id}
                 className="bg-white border border-slate-200 hover:border-red-600/30 rounded-2xl p-4 hover:shadow-md transition-all flex flex-col justify-between group text-left"
               >

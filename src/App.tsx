@@ -20,16 +20,16 @@ interface RouteState {
 
 export default function App() {
   const [route, setRoute] = useState<RouteState>(() => {
-    return parseHash(window.location.hash);
+    return parsePath(window.location.pathname);
   });
 
-  function parseHash(hash: string): RouteState {
-    if (!hash || hash === "#" || hash === "#/") {
+  function parsePath(pathname: string): RouteState {
+    if (!pathname || pathname === "/" || pathname === "") {
       return { page: "home" };
     }
     
-    // Clean trailing slashes or question marks if any
-    const cleaned = hash.replace(/^#\//, "").split("?")[0];
+    // Clean leading and trailing slashes
+    const cleaned = pathname.replace(/^\/+|\/+$/g, "").split("?")[0];
     const parts = cleaned.split("/");
 
     if (parts[0] === "services") {
@@ -58,14 +58,48 @@ export default function App() {
   }
 
   useEffect(() => {
-    const handleHashChange = () => {
-      setRoute(parseHash(window.location.hash));
+    const handleLocationChange = () => {
+      setRoute(parsePath(window.location.pathname));
       // Force instant scroll back to top of the page on route transition
       window.scrollTo({ top: 0, behavior: "instant" as any });
     };
 
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handleLocationChange);
+
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest("a");
+      if (!anchor) return;
+
+      if (anchor.target === "_blank") return;
+
+      const href = anchor.getAttribute("href");
+      if (!href) return;
+
+      if (href.startsWith("mailto:") || href.startsWith("tel:")) return;
+
+      try {
+        const url = new URL(href, window.location.href);
+        if (url.origin === window.location.origin) {
+          e.preventDefault();
+          window.history.pushState(null, "", url.pathname + url.search);
+          window.dispatchEvent(new PopStateEvent("popstate"));
+        } else if (url.origin === "https://www.londonpestmanagement.co.uk") {
+          e.preventDefault();
+          window.history.pushState(null, "", url.pathname + url.search);
+          window.dispatchEvent(new PopStateEvent("popstate"));
+        }
+      } catch (err) {
+        // If URL parsing fails, let the browser handle it
+      }
+    };
+
+    document.addEventListener("click", handleGlobalClick);
+
+    return () => {
+      window.removeEventListener("popstate", handleLocationChange);
+      document.removeEventListener("click", handleGlobalClick);
+    };
   }, []);
 
   const renderActivePage = () => {

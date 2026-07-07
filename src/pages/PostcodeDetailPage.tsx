@@ -63,14 +63,14 @@ export default function PostcodeDetailPage({ boroughId, postcode }: PostcodeDeta
           </p>
           <div className="flex justify-center gap-3">
             <a
-              href="#/areas"
+              href="/areas"
               className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl transition-all"
             >
               Browse Covered Areas
             </a>
             {borough && (
               <a
-                href={`#/areas/${borough.id}`}
+                href={`/areas/${borough.id}`}
                 className="inline-block bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl transition-all"
               >
                 Go to {borough.name}
@@ -92,9 +92,9 @@ export default function PostcodeDetailPage({ boroughId, postcode }: PostcodeDeta
         {/* Breadcrumb Navigation */}
         <div className="mb-6 text-left">
           <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-500">
-            <a href="#/areas" className="hover:text-red-600 transition-colors">Covered Areas</a>
+            <a href="/areas" className="hover:text-red-600 transition-colors">Covered Areas</a>
             <span>/</span>
-            <a href={`#/areas/${borough.id}`} className="hover:text-red-600 transition-colors">{borough.name}</a>
+            <a href={`/areas/${borough.id}`} className="hover:text-red-600 transition-colors">{borough.name}</a>
             <span>/</span>
             <span className="text-red-600 font-mono font-black">{cleanPostcode}</span>
           </div>
@@ -227,7 +227,7 @@ export default function PostcodeDetailPage({ boroughId, postcode }: PostcodeDeta
                   {sisterPostcodes.map((pc) => (
                     <a
                       key={pc}
-                      href={`#/areas/${borough.id}/${pc.toLowerCase()}`}
+                      href={`/areas/${borough.id}/${pc.toLowerCase()}`}
                       className="bg-white hover:bg-red-50 hover:text-red-600 hover:border-red-600 border border-slate-200 shadow-sm text-slate-900 font-extrabold font-mono text-xs px-3 py-1.5 rounded-xl transition-all"
                     >
                       {pc}

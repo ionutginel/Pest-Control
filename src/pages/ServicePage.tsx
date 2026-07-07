@@ -46,7 +46,7 @@ export default function ServicePage({ serviceId }: ServicePageProps) {
         
         {/* Breadcrumb / Back button */}
         <div className="mb-6 text-left">
-          <a href="#/" className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-red-600 transition-colors">
+          <a href="/" className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-red-600 transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
           </a>
         </div>

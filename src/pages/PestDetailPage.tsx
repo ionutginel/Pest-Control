@@ -44,7 +44,7 @@ export default function PestDetailPage({ pestId }: PestDetailPageProps) {
             The requested pest record does not exist in our reference index. Please select from our database of 27 active UK pest profiles.
           </p>
           <a
-            href="#/pests"
+            href="/pests"
             className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl transition-all"
           >
             Browse Pests Database
@@ -61,7 +61,7 @@ export default function PestDetailPage({ pestId }: PestDetailPageProps) {
         {/* Breadcrumbs */}
         <div className="mb-6 flex items-center justify-between">
           <a
-            href="#/pests"
+            href="/pests"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-red-600 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Pests Database
