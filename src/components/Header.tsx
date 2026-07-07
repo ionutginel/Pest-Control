@@ -64,7 +64,7 @@ export default function Header({ currentRoute }: HeaderProps) {
           
           {/* Logo with Red Brand Theme */}
           <a
-            href="#/"
+            href="https://www.londonpestmanagement.co.uk/"
             id="header-logo"
             className="flex items-center gap-2 cursor-pointer group text-left"
           >

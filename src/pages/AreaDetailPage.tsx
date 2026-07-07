@@ -175,7 +175,7 @@ export default function AreaDetailPage({ boroughId }: AreaDetailPageProps) {
                 <Star className="w-4 h-4 fill-current" />
               </div>
               <p className="text-xs text-slate-600 italic leading-relaxed">
-                "Had a severe rodent scratching noise issue behind our plasterboards in {borough.name}. Rodent Exterminators sent an engineer within 40 minutes of our call. They found the entry point near the drain pipe, treated, and sealed the gaps. Spectacular service!"
+                "Had a severe rodent scratching noise issue behind our plasterboards in {borough.name}. London Pest Management sent an engineer within 40 minutes of our call. They found the entry point near the drain pipe, treated, and sealed the gaps. Spectacular service!"
               </p>
               <span className="text-[10px] text-slate-400 font-bold block">— Sarah K., Resident in {borough.name}</span>
             </div>

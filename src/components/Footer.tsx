@@ -18,7 +18,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           
           {/* Col 1: Corporate Details */}
           <div className="md:col-span-5 space-y-5">
-            <a href="#/" className="flex items-center gap-2 group">
+            <a href="https://www.londonpestmanagement.co.uk/" className="flex items-center gap-2 group">
               <div className="bg-red-600 text-white p-2 rounded-xl transition-transform group-hover:scale-105 shadow-md shadow-red-600/20">
                 <ShieldCheck className="w-5 h-5" />
               </div>
