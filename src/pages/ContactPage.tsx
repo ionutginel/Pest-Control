@@ -66,8 +66,8 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-1">
                   <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">EMAIL SUPPORT</span>
-                  <a href="mailto:contact@londonpestmanagement.co.uk" className="text-sm font-extrabold text-slate-950 hover:text-red-600 block break-all">
-                    contact@londonpestmanagement.co.uk
+                  <a href="mailto:info@londonpestmanagement.co.uk" className="text-sm font-extrabold text-slate-950 hover:text-red-600 block break-all">
+                    info@londonpestmanagement.co.uk
                   </a>
                   <p className="text-[11px] text-slate-500">Typical response within 1 hour.</p>
                 </div>

@@ -12,6 +12,10 @@ import AreaDetailPage from "./pages/AreaDetailPage";
 import PostcodeDetailPage from "./pages/PostcodeDetailPage";
 import ContactPage from "./pages/ContactPage";
 
+// Data
+import { pestsData } from "./data/pests";
+import { boroughsData } from "./data/boroughs";
+
 interface RouteState {
   page: string;
   id?: string;
@@ -22,6 +26,114 @@ export default function App() {
   const [route, setRoute] = useState<RouteState>(() => {
     return parsePath(window.location.pathname);
   });
+
+  useEffect(() => {
+    let title = "London Pest Management | Professional Pest Control London";
+    let description = "London Pest Management provides professional, fast, and reliable pest control services across all London boroughs. 24/7 emergency response for residential & commercial properties.";
+    let keywords = "pest control london, emergency pest control, bedbug treatment london, mice exterminator london, rat removal london, residential pest control, commercial pest control";
+
+    switch (route.page) {
+      case "home":
+        title = "London Pest Management | Professional Pest Control London";
+        description = "London Pest Management provides professional, fast, and reliable pest control services across all London boroughs. 24/7 emergency response for residential & commercial properties.";
+        keywords = "pest control london, emergency pest control, bedbug treatment london, mice exterminator london, rat removal london, residential pest control, commercial pest control";
+        break;
+
+      case "service-detail":
+        if (route.id === "commercial") {
+          title = "Commercial Pest Control & Compliance | London Pest Management";
+          description = "BPCA-compliant commercial pest control and preventative maintenance contracts for London businesses, restaurants, offices, and landlords. 24/7 priority support.";
+          keywords = "commercial pest control london, business pest management, restaurant pest control, office extermination, bpca compliance";
+        } else {
+          title = "Domestic Pest Control Services | London Pest Management";
+          description = "Professional and safe residential pest control services in London. Fast eradication of bedbugs, mice, rats, cockroaches, and wasps for your home with guaranteed results.";
+          keywords = "domestic pest control london, residential pest control, home exterminator, bedbug treatment, safe pest control";
+        }
+        break;
+
+      case "pests":
+        title = "London Pests Encyclopedia & Identification Guide | London Pest Management";
+        description = "Browse our comprehensive London pests database. Identify common UK pests, understand their health risks, and find fast treatment options and pricing.";
+        keywords = "uk pest identification, pest guide london, common london pests, pest treatment pricing, identifying insect infestations";
+        break;
+
+      case "pest-detail": {
+        const pest = pestsData.find((p) => p.id === route.id);
+        if (pest) {
+          title = `${pest.name} Control & Extermination | London Pest Management`;
+          description = `Professional ${pest.name} (${pest.scientificName}) eradication services in London. Safe treatments, fast emergency response, and expert prevention tips starting from £${pest.startingPrice}.`;
+          keywords = `${pest.name} control london, exterminate ${pest.name}, ${pest.name} infestation, ${pest.name} treatment cost, how to get rid of ${pest.name}`;
+        } else {
+          title = "Pest Control & Extermination | London Pest Management";
+          description = "Professional UK pest control, extermination, and removal services. Safe treatments, fast response times, and expert prevention tips.";
+          keywords = "pest control london, pest exterminator, pest removal london";
+        }
+        break;
+      }
+
+      case "areas":
+        title = "Areas We Cover | Local Pest Control Across London";
+        description = "London Pest Management operates across all 32 London boroughs. Check our local response times and find emergency pest controllers in your borough or postcode.";
+        keywords = "pest control areas covered, local pest control london, emergency exterminator borough list, london postcodes pest control";
+        break;
+
+      case "area-detail": {
+        const borough = boroughsData.find((b) => b.id === route.id);
+        if (borough) {
+          title = `Pest Control in ${borough.name} | Fast ${borough.estimatedResponseTime} Response`;
+          description = `Reliable pest control and eradication services in the London Borough of ${borough.name}. Local emergency technicians available in ${borough.postcodes.join(", ")} with an average response time of ${borough.estimatedResponseTime}.`;
+          keywords = `pest control ${borough.name}, local exterminator ${borough.name}, emergency pest control ${borough.name}, ${borough.postcodes.join(", ").toLowerCase()} pest removal`;
+        } else {
+          title = "Local Pest Control Services | London Pest Management";
+          description = "Professional local pest control and eradication services. Emergency technicians available across all London boroughs with rapid response times.";
+          keywords = "local pest control, local exterminator london, emergency pest response";
+        }
+        break;
+      }
+
+      case "postcode-detail": {
+        const borough = boroughsData.find((b) => b.id === route.id);
+        const postcodeUpper = (route.postcode || "").toUpperCase();
+        if (borough) {
+          title = `Local Pest Control in ${postcodeUpper} (${borough.name}) | Emergency Service`;
+          description = `Emergency pest control services in ${postcodeUpper}, ${borough.name}. BPCA-certified local technicians on-call for immediate dispatch to your home or business in ${postcodeUpper}.`;
+          keywords = `pest control ${postcodeUpper}, exterminator ${postcodeUpper}, emergency pest control ${postcodeUpper}, local pest control ${borough.name} ${postcodeUpper}`;
+        } else {
+          title = `Pest Control in ${postcodeUpper} | Emergency Exterminator`;
+          description = `Fast, reliable local pest control and eradication services in ${postcodeUpper}. Immediate dispatcher visits available 24/7 for homes and businesses.`;
+          keywords = `pest control ${postcodeUpper}, exterminator ${postcodeUpper}, local pest control ${postcodeUpper}`;
+        }
+        break;
+      }
+
+      case "contact":
+        title = "Emergency Pest Control Booking & Contact | London Pest Management";
+        description = "Contact our 24/7 London pest dispatch team at 020 8819 8933. Book a same-day inspection, request a quote, or secure an emergency callback.";
+        keywords = "contact london pest management, book pest control london, 24/7 pest hotline, emergency pest dispatch, request pest control quote";
+        break;
+    }
+
+    // Set document title
+    document.title = title;
+
+    // Set or create description meta tag
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.setAttribute("name", "description");
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute("content", description);
+
+    // Set or create keywords meta tag
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement("meta");
+      metaKeywords.setAttribute("name", "keywords");
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute("content", keywords);
+  }, [route]);
 
   function parsePath(pathname: string): RouteState {
     if (!pathname || pathname === "/" || pathname === "") {

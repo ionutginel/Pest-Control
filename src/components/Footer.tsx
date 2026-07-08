@@ -51,8 +51,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Mail className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-200 block">Email Support:</span>
-                  <a href="mailto:contact@londonpestmanagement.co.uk" className="hover:text-white">
-                    contact@londonpestmanagement.co.uk
+                  <a href="mailto:info@londonpestmanagement.co.uk" className="hover:text-white">
+                    info@londonpestmanagement.co.uk
                   </a>
                 </div>
               </div>
